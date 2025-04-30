@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<html>
+<head>
+    <title>Öğrenci Giriş</title>
+    <link rel="stylesheet" href="Main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        function toggleForm() {
+            let loginForm = document.getElementById("login-form");
+            let signupForm = document.getElementById("signup-form");
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+                signupForm.style.display = "none";
+            } else {
+                loginForm.style.display = "none";
+                signupForm.style.display = "block";
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Öğrenci Portalı</h2>
+        <div id="login-form">
+            <h3>Giriş</h3>
+            <form action="BG.php" method="post">
+                <input type="text" name="name" placeholder="Adı" required>
+                <input type="text" name="ltname" placeholder="SoyAdı" required>
+                <input type="password" name="password" placeholder="Şifre" required>
+                <button type="submit" name="stogranci_login">Giriş</button>
+            </form>
+            <p><a href="#" onclick="toggleForm()">Hesabınız yok mu? Kayıt olun</a></p>
+        </div>
+        <div id="signup-form">
+            <h3>Kayıt olun</h3>
+            <form action="BG.php" method="post">
+                <input type="text" name="name" placeholder="Adı" required>
+                <input type="text" name="lastname" placeholder="Soyadı" required>
+                <input type="password" name="password" placeholder="Şifre" required>
+                <button type="submit" name="signup">Kayıt olun</button>
+            </form>
+            <p><a href="#" onclick="toggleForm()">Zaten bir hesabınız var mı? Giriş yapın</a></p>
+        </div>
+        <p><a href="tchogratmen_index.html">Öğretmen Girişine Git</a></p>
+    </div>
+</body>
+</html>
